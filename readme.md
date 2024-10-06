@@ -15,6 +15,12 @@ cookieにyuki=Trueを設定すると認証されます。  <br>
 今すぐYUKIを使いたい方向けの改良に成功したのです。
 <br>
 ## やり方
+<img src="https://pokemogukunns.github.io/codespase1.png">
+ここの中の緑色の枠の中の
+```
+＜ ＞ Code▼
+
+を選択します。
 
 ```bash
 pip install -r requirements.txt
