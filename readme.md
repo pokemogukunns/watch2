@@ -19,11 +19,12 @@ cookieにyuki=Trueを設定すると認証されます。  <br>
 ここの中の緑色の枠の中の
 <br>
 
-```
-＜ ＞ Code▼
-
+＜ ＞ Code▼   を選択します。
 <br>
-を選択します。
-
+次に、<br>
+<img src="https://pokemogukunns.github.io/codespase2.png">
+この中の、Codespaceを押すと、<br>
+<img src="https://pokemogukunns.github.io/codespase3.png">
+こうなるので、この中の＋を押しましょう。（新しいタブでコードスペースが開かれますが、閉じないでください。）<br>
 ```bash
 pip install -r requirements.txt
