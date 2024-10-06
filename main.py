@@ -167,7 +167,6 @@ def get_verifycode():
 
 
 
-
 from fastapi import FastAPI, Depends
 from fastapi import Response,Cookie,Request
 from fastapi.responses import HTMLResponse,PlainTextResponse
@@ -176,7 +175,12 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Union
+from flask import Flask
 
+app = Flask(__name__)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 app.mount("/css", StaticFiles(directory="./css"), name="static")
