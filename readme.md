@@ -26,10 +26,30 @@ cookieにyuki=Trueを設定すると認証されます。  <br>
 <br>この中の、Codespaceを押すと、<br>
 <img src="https://pokemogukunns.github.io/codespase3.png"><br>
 こうなるので、この中の＋を押しましょう。（新しいタブでコードスペースが開かれますが、閉じないでください。）<br>
-開いたら、
-```html
-<h1>ターミナル</h1>
---------------
+開いたら、<br>
+<h1>"ターミナル"</h1>
+<br>
+
 # 依存関係のダウンロード
+
+<br>以下のコマンドを実行して、依存関係をダウンロードします。
+
 ```bash
 pip install -r requirements.txt
+```
+
+
+# webサービスを作る為のポート指定
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8080
+```
+
+# サービスの停止　(任意)
+```bash
+CTRL+C
+```
+# 注意点
+これら全てのコマンドを一つずつ打ち実行されると、<br>
+ポート指定で公開用にするかが右下に出てくると思うので、<br>
+公開してください。
