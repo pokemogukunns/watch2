@@ -26,5 +26,10 @@ cookieにyuki=Trueを設定すると認証されます。  <br>
 <br>この中の、Codespaceを押すと、<br>
 <img src="https://pokemogukunns.github.io/codespase3.png"><br>
 こうなるので、この中の＋を押しましょう。（新しいタブでコードスペースが開かれますが、閉じないでください。）<br>
+開いたら、
+```html
+<h1>ターミナル</h1>
+--------------
+# 依存関係のダウンロード
 ```bash
 pip install -r requirements.txt
