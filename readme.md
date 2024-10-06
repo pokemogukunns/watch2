@@ -15,3 +15,6 @@ cookieにyuki=Trueを設定すると認証されます。  <br>
 今すぐYUKIを使いたい方向けの改良に成功したのです。
 <br>
 ## やり方
+
+```bash
+pip install -r requirements.txt
