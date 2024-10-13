@@ -323,3 +323,60 @@ def page(request: Request,__):
 @app.exception_handler(APItimeoutError)
 def APIwait(request: Request,exception: APItimeoutError):
     return template("APIwait.html",{"request": request},status_code=500)
+
+
+
+
+
+
+
+import requests
+
+API_KEY = 'YOUR_CLOUDCONVERT_API_KEY'
+
+def compress_video(video_url):
+    # CloudConvert APIを使って動画を圧縮する
+    process_url = 'https://api.cloudconvert.com/v2/jobs'
+    headers = {
+        'Authorization': f'Bearer {API_KEY}',
+        'Content-Type': 'application/json'
+    }
+
+    data = {
+        "tasks": {
+            'import-my-file': {
+                "operation": 'import/url',
+                "url": video_url
+            },
+            'convert-my-file': {
+                "operation": 'convert',
+                "input": 'import-my-file',
+                "output_format": 'mp4',
+                "video_codec": 'h264',
+                "audio_codec": 'aac',
+                "quality": '30',
+                "width": 1280
+            },
+            'export-my-file': {
+                "operation": 'export/url',
+                "input": 'convert-my-file'
+            }
+        }
+    }
+
+    # CloudConvertのジョブ作成
+    response = requests.post(process_url, headers=headers, json=data)
+    job_info = response.json()
+
+    # 圧縮された動画のダウンロードリンクを取得
+    for task in job_info['data']['tasks']:
+        if task['name'] == 'export-my-file':
+            download_link = task['result']['files'][0]['url']
+            return download_link
+
+    return None
+
+# 動画URLを指定
+video_url = videourls[0]
+compressed_video_url = compress_video(video_url)
+print('圧縮された動画のダウンロードリンク:', compressed_video_url)
