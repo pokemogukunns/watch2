@@ -330,53 +330,53 @@ def APIwait(request: Request,exception: APItimeoutError):
 
 
 
-import requests
+#import requests
 
-API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTFlMjllMmJjMDk1N2Y3M2JjMjBkZTA0MDhkMGFiOTlhYjg1NzQ2ZjNhZmQzNmRiNjBjNzViMDNhZmJjZWM5NDQ5NDIwNTk4YjQ2MWM5NzUiLCJpYXQiOjE3Mjg4NTcwMjIuNTUwNzMxLCJuYmYiOjE3Mjg4NTcwMjIuNTUwNzMzLCJleHAiOjQ4ODQ1MzA2MjIuNTQ1NjI0LCJzdWIiOiI2ODkxODQ1MiIsInNjb3BlcyI6W119.oxtkBhW0eJcRxBKKkPV70EE-tDFBtFY6Pb6xHWrWaR4HM_27iXFEfUftosumRFqRvwn_A6cVfIIoPk3218upcv7yoPlW4-arhQg26XDoR2LZcuEMCFuMkaoUZtyMNY5GmT5_1p0qmIk3eCBTwidc7FqucO_LbhlLwQF0__e64Aoe83oC0Pdh6II4TuWsLEOMstzlaolRbVdt2FNomkjru7_14jp-yjcUqiaHU4YkZiX25cG465ZfCcHb3gSxEadNwPF8ou4v8hI5-HL9IrQ0PHnmTByCEE-JEMY4AhT-fGlXgJ71xm0RQELj8NQpPe4pjhpBILgVcOInOmK2RSib948LjyION8rbKbffTfcOsyhyNFzO7lYGoLA5rJrnLl5Um2QDmzwbHgmtQjXzy9xkliAyf6rTaThlCxAfahm0uCmTMttJ_75rsKihzIUVRtW_PhibY0AAExihhVHIiAPi8oZHUdRZqhOkt7uZTr9P-NfNNHc4eG1eF1nvg2Tx1XQ0oOLUDVrIgxxEx1eD8NC5dowqRls2W_tuSgj6vBMw6A-vM8vMLc0ZXY0aBn0DfqSdK9-iDURa2P15eUTKteQHc9yZ2lxX93CwPyfXfhJZBjo8-0L29orlLaDBauwq0_wN9-crd5fNFdJ52mH9izBjRVY157fcYcb5qPmDq86K_xY'
+#API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTFlMjllMmJjMDk1N2Y3M2JjMjBkZTA0MDhkMGFiOTlhYjg1NzQ2ZjNhZmQzNmRiNjBjNzViMDNhZmJjZWM5NDQ5NDIwNTk4YjQ2MWM5NzUiLCJpYXQiOjE3Mjg4NTcwMjIuNTUwNzMxLCJuYmYiOjE3Mjg4NTcwMjIuNTUwNzMzLCJleHAiOjQ4ODQ1MzA2MjIuNTQ1NjI0LCJzdWIiOiI2ODkxODQ1MiIsInNjb3BlcyI6W119.oxtkBhW0eJcRxBKKkPV70EE-tDFBtFY6Pb6xHWrWaR4HM_27iXFEfUftosumRFqRvwn_A6cVfIIoPk3218upcv7yoPlW4-arhQg26XDoR2LZcuEMCFuMkaoUZtyMNY5GmT5_1p0qmIk3eCBTwidc7FqucO_LbhlLwQF0__e64Aoe83oC0Pdh6II4TuWsLEOMstzlaolRbVdt2FNomkjru7_14jp-yjcUqiaHU4YkZiX25cG465ZfCcHb3gSxEadNwPF8ou4v8hI5-HL9IrQ0PHnmTByCEE-JEMY4AhT-fGlXgJ71xm0RQELj8NQpPe4pjhpBILgVcOInOmK2RSib948LjyION8rbKbffTfcOsyhyNFzO7lYGoLA5rJrnLl5Um2QDmzwbHgmtQjXzy9xkliAyf6rTaThlCxAfahm0uCmTMttJ_75rsKihzIUVRtW_PhibY0AAExihhVHIiAPi8oZHUdRZqhOkt7uZTr9P-NfNNHc4eG1eF1nvg2Tx1XQ0oOLUDVrIgxxEx1eD8NC5dowqRls2W_tuSgj6vBMw6A-vM8vMLc0ZXY0aBn0DfqSdK9-iDURa2P15eUTKteQHc9yZ2lxX93CwPyfXfhJZBjo8-0L29orlLaDBauwq0_wN9-crd5fNFdJ52mH9izBjRVY157fcYcb5qPmDq86K_xY'
 
-def compress_video(video_url):
+#def compress_video(video_url):
     # CloudConvert APIを使って動画を圧縮する
-    process_url = 'https://api.cloudconvert.com/v2/jobs'
-    headers = {
-        'Authorization': f'Bearer {API_KEY}',
-        'Content-Type': 'application/json'
-    }
+   # process_url = 'https://api.cloudconvert.com/v2/jobs'
+    #headers = {
+        #'Authorization': f'Bearer {API_KEY}',
+        #'Content-Type': 'application/json'
+    #}
 
-    data = {
-        "tasks": {
-            'import-my-file': {
-                "operation": 'import/url',
-                "url": video_url
-            },
-            'convert-my-file': {
-                "operation": 'convert',
-                "input": 'import-my-file',
-                "output_format": 'mp4',
-                "video_codec": 'h264',
-                "audio_codec": 'aac',
-                "quality": '30',
-                "width": 1280
-            },
-            'export-my-file': {
-                "operation": 'export/url',
-                "input": 'convert-my-file'
-            }
-        }
-    }
+    #data = {
+        #"tasks": {
+            #'import-my-file': {
+                #"operation": 'import/url',
+                #"url": video_url
+           # },
+       #     'convert-my-file': {
+        #        "operation": 'convert',
+       #         "input": 'import-my-file',
+        #        "output_format": 'mp4',
+          #      "video_codec": 'h264',
+           #     "audio_codec": 'aac',
+           #     "quality": '30',
+            #    "width": 1280
+          #  },
+          #  'export-my-file': {
+          #      "operation": 'export/url',
+           #     "input": 'convert-my-file'
+          #  }
+       # }
+   # }
 
     # CloudConvertのジョブ作成
-    response = requests.post(process_url, headers=headers, json=data)
-    job_info = response.json()
+   # response = requests.post(process_url, headers=headers, json=data)
+   # job_info = response.json()
 
     # 圧縮された動画のダウンロードリンクを取得
-    for task in job_info['data']['tasks']:
-        if task['name'] == 'export-my-file':
-            download_link = task['result']['files'][0]['url']
-            return download_link
+  #  for task in job_info['data']['tasks']:
+      #  if task['name'] == 'export-my-file':
+          #  download_link = task['result']['files'][0]['url']
+   #         return download_link
 
-    return None
+   # return None
 
 # 動画URLを指定
-video_url = videourls[0]
-compressed_video_url = compress_video(video_url)
-print('圧縮された動画のダウンロードリンク:', compressed_video_url)
+#video_url = videourls[0]
+#compressed_video_url = compress_video(video_url)
+#print('圧縮された動画のダウンロードリンク:', compressed_video_url)
