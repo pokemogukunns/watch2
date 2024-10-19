@@ -8,6 +8,11 @@ import os
 import subprocess
 from cache import cache
 
+# Torのプロキシ設定
+proxies = {
+    'http': 'socks5h://127.0.0.1:9050',
+    'https': 'socks5h://127.0.0.1:9050'
+}
 
 max_api_wait_time = 3
 max_time = 10
@@ -16,6 +21,14 @@ url = requests.get(r'https://raw.githubusercontent.com/mochidukiyukimi/yuki-yout
 version = "1.0"
 
 os.system("chmod 777 ./yukiverify")
+
+# .onionアドレスにリクエスト
+for api in apis:
+    try:
+        response = requests.get(api, proxies=proxies, timeout=max_time)
+        print(f"Response from {api}: {response.text}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error with {api}: {e}")
 
 apichannels = []
 apicomments = []
