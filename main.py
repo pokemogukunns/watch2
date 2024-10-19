@@ -16,7 +16,7 @@ proxies = {
 
 max_api_wait_time = 3
 max_time = 10
-apis = [r"https://inv.nadeko.net/", r"https://invidious.jing.rocks", r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
+apis = [r"https://inv.nadeko.net/", r"https://invidious.jing.rocks", r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"https://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
 url = requests.get(r'https://raw.githubusercontent.com/mochidukiyukimi/yuki-youtube-instance/main/instance.txt').text.rstrip()
 version = "1.0"
 
