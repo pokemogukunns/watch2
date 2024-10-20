@@ -9,26 +9,27 @@ import subprocess
 from cache import cache
 
 # Torのプロキシ設定
-proxies = {
-    'http': 'socks5h://127.0.0.1:9050',
-    'https': 'socks5h://127.0.0.1:9050'
-}
+#proxies = {
+#    'http': 'socks5h://127.0.0.1:9050',
+#    'https': 'socks5h://127.0.0.1:9050'
+#}
+#apis = [r"https://inv.nadeko.net/", r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"https://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
 
 max_api_wait_time = 3
 max_time = 10
-apis = [r"https://inv.nadeko.net/", r"https://invidious.jing.rocks", r"https://invidious.nerdvpn.de/", r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"https://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
+apis = [r"https://invidious.jing.rocks", r"https://invidious.nerdvpn.de/"]
 url = requests.get(r'https://raw.githubusercontent.com/mochidukiyukimi/yuki-youtube-instance/main/instance.txt').text.rstrip()
 version = "1.0"
 
 os.system("chmod 777 ./yukiverify")
 
 # .onionおよび.i2pアドレスにリクエスト
-for api in apis:
-    try:
-        response = requests.get(api, proxies=proxies, timeout=max_time)
-        print(f"Response from {api}: {response.text}")
-    except requests.exceptions.RequestException as e:
-        print(f"Error with {api}: {e}")
+#for api in apis:
+#    try:
+#        response = requests.get(api, proxies=proxies, timeout=max_time)
+#        print(f"Response from {api}: {response.text}")
+#    except requests.exceptions.RequestException as e:
+#        print(f"Error with {api}: {e}")
 
 
 apichannels = []
