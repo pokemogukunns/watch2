@@ -17,7 +17,7 @@ from cache import cache
 
 max_api_wait_time = 3
 max_time = 10
-apis = [r"https://invidious.nerdvpn.de/", r"https://invidious.ethibox.fr/", r"https://inv.nadeko.net/", r"https://invidious.jing.rocks/", r"https://googlevideo.com/videoplayback/", r"https://s.ytimg.com",r"https://i.ytimg.com", r"https://yt3.ggpht.com", r"https://www.youtube.com/embed"]
+apis = [r"https://invidious.nerdvpn.de/", r"https://inv.nadeko.net/", r"https://invidious.jing.rocks/", r"https://invidious.ethibox.fr/", r"https://googlevideo.com/videoplayback/", r"https://s.ytimg.com",r"https://i.ytimg.com", r"https://yt3.ggpht.com", r"https://www.youtube.com/embed"]
 url = requests.get(r'https://raw.githubusercontent.com/mochidukiyukimi/yuki-youtube-instance/main/instance.txt').text.rstrip()
 version = "1.0"
 
