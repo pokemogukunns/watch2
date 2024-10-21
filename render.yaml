@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: link-tube
+    name: poke-tube
     env: python
     region: Oregon
     plan: free
