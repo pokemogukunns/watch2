@@ -11,6 +11,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://pokemogukunns.github.io/yuki/search.js"></script>
+<style>
+#error-log {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+        display: block;
+}
+</style>
 </head>
 <h1><a href="#error-log">ログ</a></h1>
 <body class="no-theme">
@@ -92,6 +100,14 @@
     </div>
     <div class="pure-u-1 pure-u-md-2-24"></div><br>
     <div id="error-log"></div>
+	<script>
+        function logError(message) {
+            const logDiv = document.getElementById('error-log');
+            const logEntry = document.createElement('p');
+            logEntry.textContent = message;
+            logDiv.appendChild(logEntry);
+        }
+    </script>
     <script>
         document.cookie = "yuki=True;max-age=2592000;";
         function getCookie(name) { let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)")); return matches ? decodeURIComponent(matches[1]) : undefined; }
