@@ -3,6 +3,7 @@
 
 <head>
     <title>LINK TUBE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="/css/pure-min.css">
     <link rel="stylesheet" href="/css/grids-responsive-min.css">
     <link rel="stylesheet" href="/css/ionicons.min.css">
@@ -41,12 +42,13 @@
                 </div>
             </div>
             <div id="player-container" class="h-box">
-                <video style="outline:none;width:100%;background-color:#000;" playsinline="" poster="{% if proxy == "True" %}/thumbnail?v={{ videoid }}{% else %}https://img.youtube.com/vi/{{ videoid }}/0.jpg{% endif %}" id="player" class="on-video_player video-js player-style-invidious" controls="" loadedmetadata="settime()" loop="">
-                    {% for videourl in videourls%}
-                    <source src="{{videourl}}">
-                    {% endfor %}
-                </video>
-                </video>
+</head>
+<body>
+    <video controls="" autoplay="" src="https://rr1---sn-oguelnsz.googlevideo.com/videoplayback?...">
+    </video>
+</body>
+</html>
+
                 <a onclick="window.location.reload(true);">
 	<i class="fa fa-refresh" aria-hidden="true"></i><span>再読み込み</span>
 </a>
