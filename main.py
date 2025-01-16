@@ -13,7 +13,7 @@ from cache import cache
 #    'http': 'socks5h://127.0.0.1:9050',
 #    'https': 'socks5h://127.0.0.1:9050'
 #}
-#apis = [r"https://inv.nadeko.net/", r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"https://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
+#apis = [r"https://inv.nadeko.net/",r"https://inv.nadekonw7plitnhuawu6ytjsl7jlglk2t6pyq6eftptmiv3dvqndwvyd.onion", r"https://nerdvpneaggggfdiurknszkbmhvjndks5z5k3g5yp4nhphflh3n3boad.onion", r"http://zzlsbhhfvwg3oh36tcvx4r7n6jrw7zibvyvfxqlodcwn3mfrvzuq.b32.i2p"]
 
 max_api_wait_time = 3
 max_time = 10
